@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>shortcut</title>
+  </head>
+  <body>
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      const name = params.get('name') || 'shortcut';
+      window.location.href = `shortcuts://run-shortcut?name=${name}`;
+      setTimeout(function() {
+        window.close();
+      }, 3000);
+    </script>
+  </body>
+</html>
